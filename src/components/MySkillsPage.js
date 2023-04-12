@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import {lightTheme} from './Themes';
-import { Design, Develope} from './AllSvgs';
+import { lightTheme } from './Themes';
+// import { Design, Develope } from './AllSvgs';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -48,7 +48,7 @@ const Title = styled.h2`
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: calc(1em + 1vw);
+font-size: calc(.7em + 1vw);
 
 ${Main}:hover &{
     &>*{
@@ -63,7 +63,7 @@ margin-right: 1rem;
 
 const Description = styled.div`
 color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
+font-size: calc(0.3em + 1vw);
 padding: 0.5rem 0;
 
 
@@ -85,69 +85,72 @@ ul,p{
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
-<PowerButton />
-<ParticleComponent theme='light' />
-            <Main>
-<Title>
-    <Design width={40} height={40} /> Designer
-</Title>
-<Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
-</Description>
-<Description>
-<strong>I like to Design</strong>
-<ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
-</ul>
-</Description>
-<Description>
-<strong>Tools</strong>
-<ul>
-    <li>
-       Figma
-    </li>
-    
-</ul>
-</Description>
+                <LogoComponent theme='light' />
+                <SocialIcons theme='light' />
+                <PowerButton />
+                <ParticleComponent theme='light' />
+                <Main>
+                    <Title>
+                         Backend Engineer
+                    </Title>
+                    <Description>
+                    Backend developer responsibilities include creating, maintaining, testing, and debugging the entire back end of an application or system.
+                    </Description>
+                    <Description>
+                        <strong>Programming Language</strong>
+                        <p>
+                            Python, Node Js
+                        </p>
+                    </Description>
+                    <Description>
+                        <strong>Framework</strong>
+                        <p>
+                            Express Js, Django, Adonis Js, 
+                        </p>
+                    </Description>
+                    <Description>
+                        <strong>Database</strong>
+                        <p>
+                            Sequelize, Mongoose, MySQL, Knex.js, MongoDB 
+                        </p>
+                    </Description>
+                </Main>
+                <Main>
+                    <Title>
+                        Frontend Developer
+                    </Title>
+                    <Description>
+                        A front-end developer is a type of web developer who focuses on creating the visual and interactive components of a website or web application.
+                    </Description>
+                    <Description>
+                        <strong>Programming Language</strong>
+                        <p>
+                            Javascript, TypeScript, HTML, CSS
+                        </p>
+                    </Description>
+                    <Description>
+                        <strong>Framework</strong>
+                        <p>
+                            React Js, Vue Js 
+                        </p>
+                    </Description>
+                    <Description>
+                        <strong>Libraries</strong>
+                        <p>
+                            Tailwind, Bootstrap, Framer Motion, SASS, styled-components 
+                        </p>
+                    </Description>
 
-            </Main>
-            <Main>
-<Title>
-    <Develope width={40} height={40} /> Frontend Developer
-</Title>
-<Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
-</Description>
-<Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
-</Description>
+                </Main>
 
-            </Main>
+                <BigTitle text="SKILLS" top="80%" right="30%" />
 
-            <BigTitle text="SKILLS" top="80%" right="30%" />
-
-        </Box>
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 

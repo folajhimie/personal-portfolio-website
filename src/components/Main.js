@@ -7,7 +7,7 @@ import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
 import Intro from './Intro'
-;
+// import { BlueTheme } from './Themes'
 
 
 const MainContainer = styled.div`
