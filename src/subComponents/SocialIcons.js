@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import React from "react";
 // import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
-import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
+import { Github } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
+
+import { BsLinkedin } from "react-icons/bs";
+import { MdPhone } from "react-icons/md";
 
 const Icons = styled.div`
   display: flex;
@@ -32,69 +35,50 @@ const SocialIcons = (props) => {
   return (
     <Icons>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1 }}
       >
         <a
           style={{ color: "inherit" }}
-          href={"https://github.com/codebucks27"}
+          href={"https://github.com/folajhimie"}
         >
           <Github
-            width={25}
-            height={25}
+            width={20}
+            height={20}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.2 }}
       >
         <a
           style={{ color: "inherit" }}
-          href={"https://twitter.com/code_bucks"}
+          href={"https://www.linkedin.com/in/folajimi-shodipo-07824a180/"}
         >
-          <Twitter
-            width={25}
-            height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
+          <BsLinkedin />
         </a>
       </motion.div>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.4 }}
       >
         <a
           style={{ color: "inherit" }}
-          href={"https://facebook.com/codebucks27"}
+          href={"tel:+234 906 693 7937"}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="need-help-button"
         >
-          <Facebook
-            width={25}
-            height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
+          <MdPhone />
         </a>
+        
       </motion.div>
-      <motion.div
-        initial={{scale:0 }}
-        animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.6 }}
-      >
-        <a
-          style={{ color: "inherit" }}
-          href={"https://youtube.com"}
-        >
-          <YouTube
-            width={25}
-            height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div>
+
 
       <Line
         color={props.theme}

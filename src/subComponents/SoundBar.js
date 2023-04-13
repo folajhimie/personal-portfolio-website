@@ -50,6 +50,15 @@ width: 2px;
 margin:0 0.1rem
 `
 
+
+
+const Description = styled.h2`
+font-size: calc(1em + 0.3vw);
+font-family: 'Karla',sans-serif;
+font-weight: 600;
+padding-left: .9rem;
+`
+
 const SoundBar = () => {
 
     const ref = useRef(null);
@@ -72,7 +81,8 @@ const SoundBar = () => {
             <Line click={click}/>
             <Line click={click}/>
 
-
+            {/* <div>Play Me </div> */}
+            <Description>Play Me</Description>
             <audio src={music} ref={ref}  loop />
         </Box>
     )
